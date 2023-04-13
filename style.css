@@ -7,6 +7,8 @@
     --color-primary:#FF6565;
     --color-black:#1b1b1b;
     --color-white: #ffffff;
+    --color-ligh-grey:#07162922;
+    --color-blue:#071629;
 
     --text-color: var(--color-black);
 
@@ -63,11 +65,14 @@ body {
 
   button {
     background-color: var(--color-primary);
+    color: var(--color-white);
     padding: 13px 31px;
     border-radius: 25px;
     text-transform: uppercase;
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-small);
+    margin: 0 auto;
+    display: flex;
   }
 
   h1 {
@@ -84,6 +89,13 @@ body {
   }
   p {
     margin: 0 2rem;
+  }
+
+  footer {
+    color: var(--color-white);
+  }
+  footer p {
+    opacity: 0.35;
   }
   /*Header*/
 
@@ -223,11 +235,10 @@ body {
   .discover-title{
     margin-bottom: 4rem;
   }
-  .discover-content {
+  .discover-content{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 11rem;
 }
 
   .icons-section {
@@ -254,10 +265,16 @@ body {
   .discover-icon p {
     margin: 1.3rem 0;
   }
+  .discover-icon2 img{
+    padding-bottom: 7rem;
+  }
+
   .section1, .section2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 11rem;
+
   }
 
   .section2{
@@ -265,7 +282,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    height: 650px;
+    height: auto;
     width: 100vw;
     color: var(--color-white);
   }
@@ -275,16 +292,24 @@ body {
     font-size: var(--font-size-xx-large);
     font-weight: var(--font-weight-bold);
     position: absolute;
-    transform: translate(0px, -60px);
-    margin-left: 7.6rem;
+    transform: translate(0px, -125px);
+    margin-left: 9.6rem;
 
   }
 
   .sub-number {
     position: absolute;
-    transform: translate(0px, -30px);
+    transform: translate(0px, -100px);
     font-size: var(--font-size-small);
-    margin-left: 7.6rem;
+    margin-left: 9.6rem;
+
+  }
+  .discover-icon {
+    margin-bottom: 11rem;
+  }
+
+  .discover-icon2{
+    margin: 0 16px;
 
   }
 
@@ -299,10 +324,69 @@ body {
   }
 
 /*FORM*/
+.from-container {
+    position: relative;
+    display: flex;
+    width: 33rem;
+    flex-direction: column;
+}
 
 .visually-hidden {
     display: none;
 }
+input[type=text], input[type=email], textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--color-ligh-grey)
+  }
+  input{
+    height: 4rem;
+    margin-bottom: 4.5rem;
+  }
+.from-container h2 {
+    margin-bottom: 5.6rem;
+    display: flex;
+    justify-content: center;
+}
+textarea {
+    height: 38px;
+}
+.from-container button {
+    margin-top: 5.6rem;
+}
+.from-container {
+    margin-top: 11rem;
+    margin-bottom: 14rem;
+}
+.form-label {
+    position: absolute;
+}
+.form-name .form-label {
+    bottom: 28rem;
+    left: 0;
+}
+.form-email .form-label {
+    bottom: 19.5rem;
+    left: 0;
+}
+.form-message .form-label {
+    bottom: 11rem;
+    left: 0;
+}
+input:focus {
+    border-bottom: 2px solid #555;
+    outline: none;
+  }
+  .form-field-container input:focus ~ label,
+  .form-field-container input:valid ~ label{
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+  }
+
+  .form-field-container {
+
+  }
+  /* reset input */
 
 @media screen and (max-width: 1180px) {
     .icons-section2 {
@@ -313,11 +397,71 @@ body {
     .discover-icon2 {
         flex-basis: 40%;
     }
+    .discover-icon p {
+        max-width: 24rem;
+    }
+
     .section2 img, .number, .sub-number {
         margin: 0;
     }
+    .icons-section {
+        flex-wrap: wrap;
+    }
+    .icons-section .discover-icon {
+        flex-basis: 50%;
+    }
+}
+/*FOOTER*/
+
+footer {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-self: center;
+    flex-direction: column;
 }
 
+.footer {
+    background-color: var(--color-blue);
+    width: 100%;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer ul {
+    display: flex;
+}
+.footer li {
+    padding-left: 2rem;
+}
+.footer-logo img {
+    width: 16rem;
+}
+
+.footer-logo, .social-media-ico {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logo {
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.copyright {
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3.4rem;
+
+}
+
+svg {
+    fill :var(--color-white);
+}
 @media screen and (max-width: 767px) {
     .nav {
         flex-direction: column;
@@ -356,8 +500,18 @@ body {
       .banner {
         background-position: 38% -3rem;
       }
+      .logo {
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      footer {
+        width: auto;
+      }
+
+
     }
-
-@media screen and (max-width: 500px) {
-
+@media screen and (max-width: 520px) {
+    .icons-section {
+        display: block;
+    }
 }
