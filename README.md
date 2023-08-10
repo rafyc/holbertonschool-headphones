@@ -1,7 +1,7 @@
 # holbertonschool-headphones
 ## Implement a design from scratch
 
-![Alt](/imag/exemple.png)
+![Alt](/img/exemple.png)
 
 -   Master
 -   By:  Nicolas Philippot, UI/UX designer and Guillaume Salva, CTO at Holberton School
